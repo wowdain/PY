@@ -1,16 +1,16 @@
-# prime number v0.8
+#list
 
-number_list = input('input 2 integer number : ').split()
-start = int(number_list[0])
-end = int(number_list[1])
+bigbang = ['지디', '태양', '탑', '대성', '승리']
+exo = ['백현', '첸']
 
-if end < start :
-    start, end = end, start #tuple packing & unpacking
+exo.insert(1, '시우민')
+exo.append(bigbang) # ['백현', '시우민', '첸', ['지디', '태양', '탑', '대성', '승리']]
 
-for number in range(start, end+1):
-    if number > 1 :
-        for k in range(2, number) :
-            if number % k == 0 :
-                break
-        else :
-            print(number, end=' ')
+exo[3].pop() # 승리 제거
+
+exo[3].pop(2) # 탑 제거
+
+#exo.remove('대성') # 대성못찾음
+exo[3].remove('대성') # 대성제거
+
+del exo[2] # 첸 제거
