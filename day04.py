@@ -1,13 +1,11 @@
+#dictionay comprehension
 
-groups = {
-    '빅뱅': ['GD', '태양', '탑', '대성', '승리'],
-    '마마무' : ['문별', '솔라', '휘인', '화사']}
+univ = 'inha university'
+#letter_counts = {letter : univ.count(letter) for letter in univ}
+#print(letter_counts)
 
-#for group, members in groups.items():
-#    print(f'{group}의 멤버')
-#    for member in members:
-#        if member != '승리':
-#            print(member)
 
-print(groups['빅뱅'].pop(-1))
-print(groups)
+letter_counts = dict()
+for letter in univ:
+    letter_counts[letter] = univ.count(letter)
+print(letter_counts)
